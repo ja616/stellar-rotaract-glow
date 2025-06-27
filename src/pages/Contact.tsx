@@ -72,74 +72,81 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white font-poppins">
       <Header />
       
       <div className="pt-24">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-black via-deep-base to-section-bg">
+        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-accent-pink to-button-active bg-clip-text text-transparent">
+            <div className="mb-8 flex justify-center animate-fade-in">
+              <img 
+                src="/lovable-uploads/5d412404-e118-4763-a5fb-69304897cc03.png" 
+                alt="Rotaract Club Logos" 
+                className="h-20 w-auto"
+              />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text">
               Get In Touch
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto font-heading">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Ready to make a difference? Connect with us and be part of the change you want to see in the world.
             </p>
           </div>
         </section>
 
         {/* Contact Info & Form */}
-        <section className="py-20 bg-section-bg">
+        <section className="py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Information */}
               <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-white mb-8 font-heading">
+                <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text mb-8">
                   Contact Information
                 </h2>
                 
                 <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-accent-pink mt-1" />
+                  <div className="flex items-start space-x-4 group transform hover:scale-105 transition-all duration-300">
+                    <MapPin className="w-6 h-6 text-purple-400 mt-1 group-hover:text-blue-400 transition-colors" />
                     <div>
-                      <h3 className="font-semibold text-white mb-1 font-heading">Address</h3>
-                      <p className="text-gray-300 font-sans">
+                      <h3 className="font-semibold text-white mb-1">Address</h3>
+                      <p className="text-gray-300">
                         BMS Institute of Technology<br />
                         Yelahanka, Bangalore - 560064
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
-                    <Mail className="w-6 h-6 text-accent-pink mt-1" />
+                  <div className="flex items-start space-x-4 group transform hover:scale-105 transition-all duration-300">
+                    <Mail className="w-6 h-6 text-purple-400 mt-1 group-hover:text-blue-400 transition-colors" />
                     <div>
-                      <h3 className="font-semibold text-white mb-1 font-heading">Email</h3>
-                      <p className="text-gray-300 font-sans">rotaract.bmsy@gmail.com</p>
+                      <h3 className="font-semibold text-white mb-1">Email</h3>
+                      <p className="text-gray-300">rotaract.bmsy@gmail.com</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
-                    <Phone className="w-6 h-6 text-accent-pink mt-1" />
+                  <div className="flex items-start space-x-4 group transform hover:scale-105 transition-all duration-300">
+                    <Phone className="w-6 h-6 text-purple-400 mt-1 group-hover:text-blue-400 transition-colors" />
                     <div>
-                      <h3 className="font-semibold text-white mb-1 font-heading">Phone</h3>
-                      <p className="text-gray-300 font-sans">+91 98765 43210</p>
+                      <h3 className="font-semibold text-white mb-1">Phone</h3>
+                      <p className="text-gray-300">+91 98765 43210</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
-                    <Clock className="w-6 h-6 text-accent-pink mt-1" />
+                  <div className="flex items-start space-x-4 group transform hover:scale-105 transition-all duration-300">
+                    <Clock className="w-6 h-6 text-purple-400 mt-1 group-hover:text-blue-400 transition-colors" />
                     <div>
-                      <h3 className="font-semibold text-white mb-1 font-heading">Meeting Hours</h3>
-                      <p className="text-gray-300 font-sans">Every Friday, 4:00 PM - 6:00 PM</p>
+                      <h3 className="font-semibold text-white mb-1">Meeting Hours</h3>
+                      <p className="text-gray-300">Every Friday, 4:00 PM - 6:00 PM</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Map */}
                 <div className="mt-8">
-                  <div className="bg-gray-800 rounded-lg p-4 text-center">
-                    <div className="bg-gray-700 rounded h-48 flex items-center justify-center">
-                      <p className="text-gray-400 font-sans">Interactive Map Coming Soon</p>
+                  <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-lg p-4 text-center border border-purple-500/20">
+                    <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded h-48 flex items-center justify-center">
+                      <p className="text-gray-400">Interactive Map Coming Soon</p>
                     </div>
                   </div>
                 </div>
@@ -147,52 +154,52 @@ const Contact = () => {
 
               {/* Contact Form */}
               <div>
-                <Card className="bg-black/50 border-accent-pink/20">
+                <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-purple-500/30 backdrop-blur-sm">
                   <CardContent className="p-8">
-                    <h2 className="text-3xl font-bold text-white mb-6 font-heading">
+                    <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text mb-6">
                       Send us a Message
                     </h2>
                     
                     <form className="space-y-6">
                       <div>
-                        <label className="block text-gray-300 mb-2 font-heading">Name</label>
+                        <label className="block text-gray-300 mb-2">Name</label>
                         <input
                           type="text"
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-accent-pink focus:outline-none font-sans"
+                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-all duration-300"
                           placeholder="Your full name"
                         />
                       </div>
                       
                       <div>
-                        <label className="block text-gray-300 mb-2 font-heading">Email</label>
+                        <label className="block text-gray-300 mb-2">Email</label>
                         <input
                           type="email"
                           name="email"
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-accent-pink focus:outline-none font-sans"
+                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-all duration-300"
                           placeholder="your.email@example.com"
                         />
                       </div>
                       
                       <div>
-                        <label className="block text-gray-300 mb-2 font-heading">Message</label>
+                        <label className="block text-gray-300 mb-2">Message</label>
                         <textarea
                           name="message"
                           value={formData.message}
                           onChange={handleInputChange}
                           rows={5}
-                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-accent-pink focus:outline-none resize-none font-sans"
+                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none resize-none transition-all duration-300"
                           placeholder="Tell us how you'd like to get involved..."
                         />
                       </div>
                       
                       <Button 
                         type="submit"
-                        className="w-full bg-gradient-to-r from-accent-pink to-purple-highlight hover:from-purple-highlight hover:to-button-active text-white py-3 font-semibold font-heading rounded-lg"
+                        className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white py-3 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
                       >
                         Send Message
                       </Button>
@@ -205,23 +212,23 @@ const Contact = () => {
         </section>
 
         {/* Reviews Section */}
-        <section className="py-20 bg-deep-base">
+        <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white font-heading">
+            <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text">
               What Our Members Say
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
               {reviews.map((review, index) => (
-                <Card key={index} className="bg-black/40 border-accent-pink/20 hover:border-accent-pink/50 transition-all duration-300">
+                <Card key={index} className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 border-purple-500/30 hover:border-purple-500/60 transition-all duration-500 backdrop-blur-sm transform hover:scale-105">
                   <CardContent className="p-6">
                     <div className="flex mb-4">
                       {[...Array(review.rating)].map((_, i) => (
                         <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-gray-300 mb-4 italic font-sans">"{review.text}"</p>
-                    <p className="text-accent-pink font-semibold font-heading">- {review.name}</p>
+                    <p className="text-gray-300 mb-4 italic">"{review.text}"</p>
+                    <p className="text-purple-400 font-semibold">- {review.name}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -230,20 +237,20 @@ const Contact = () => {
         </section>
 
         {/* Instagram Grid */}
-        <section className="py-20 bg-section-bg">
+        <section className="py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4 font-heading">
+              <h2 className="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text mb-4">
                 Follow Us on Instagram
               </h2>
-              <p className="text-gray-300 mb-6 font-sans">
+              <p className="text-gray-300 mb-6">
                 Stay updated with our latest activities and events
               </p>
               <a 
                 href="https://www.instagram.com/rota_bms/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-accent-pink hover:text-button-active transition-colors font-heading font-semibold"
+                className="inline-flex items-center text-purple-400 hover:text-blue-400 transition-colors font-semibold"
               >
                 @rota_bms
               </a>
@@ -253,15 +260,15 @@ const Contact = () => {
               {instagramPosts.map((post) => (
                 <div 
                   key={post.id}
-                  className="group cursor-pointer relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300"
+                  className="group cursor-pointer relative overflow-hidden rounded-lg hover:scale-110 transition-all duration-500 border border-purple-500/20 hover:border-purple-400/60"
                 >
                   <img 
                     src={post.image}
                     alt={post.caption}
                     className="w-full h-32 md:h-40 object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2">
-                    <p className="text-white text-xs text-center font-sans">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-2">
+                    <p className="text-white text-xs text-center font-medium">
                       {post.caption}
                     </p>
                   </div>
