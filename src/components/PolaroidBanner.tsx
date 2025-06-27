@@ -55,7 +55,7 @@ const PolaroidBanner = () => {
         
         {/* Scrolling Polaroid Container */}
         <div className="relative">
-          <div className="flex space-x-8 animate-[scroll_30s_linear_infinite] hover:pause">
+          <div className="flex space-x-8 animate-scroll hover:pause">
             {/* First set */}
             {polaroids.map((polaroid) => (
               <div 
@@ -100,17 +100,6 @@ const PolaroidBanner = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
     </section>
   );
 };
