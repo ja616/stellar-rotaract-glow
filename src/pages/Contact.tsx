@@ -1,12 +1,10 @@
 
 import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Clock, Instagram, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Star } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,261 +13,192 @@ const Contact = () => {
     message: ''
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add form submission logic here
-  };
+  const reviews = [
+    {
+      name: "Priya Sharma",
+      text: "Amazing experience with Rotaract BMSY! The community service projects are truly impactful.",
+      rating: 5
+    },
+    {
+      name: "Arjun Patel", 
+      text: "Great leadership opportunities and wonderful team to work with. Highly recommend joining!",
+      rating: 5
+    },
+    {
+      name: "Sneha Kumar",
+      text: "The workshops and events are well organized. Really helped me grow personally and professionally.",
+      rating: 5
+    }
+  ];
 
   const instagramPosts = [
     {
       id: 1,
       image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=300&h=300&fit=crop',
-      caption: 'Tree plantation drive success!'
+      caption: 'Tree Plantation Drive 2024'
     },
     {
       id: 2,
       image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=300&h=300&fit=crop',
-      caption: 'Digital literacy workshop'
+      caption: 'Tech Workshop Success'
     },
     {
       id: 3,
       image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=300&h=300&fit=crop',
-      caption: 'Community health camp'
+      caption: 'Health Camp Initiative'
     },
     {
       id: 4,
       image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=300&h=300&fit=crop',
-      caption: 'Leadership training session'
+      caption: 'Leadership Development'
     },
     {
       id: 5,
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=300&fit=crop',
-      caption: 'Tech for good workshop'
+      caption: 'Community Outreach'
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop',
-      caption: 'Community outreach program'
-    }
-  ];
-
-  const reviews = [
-    {
-      id: 1,
-      name: 'Arun Prasad',
-      role: 'Alumni',
-      review: 'Rotaract BMSY transformed my perspective on community service. The leadership skills I gained here continue to benefit me professionally.',
-      rating: 5
-    },
-    {
-      id: 2,
-      name: 'Meera Krishnan',
-      role: 'Community Partner',
-      review: 'Working with Rotaract BMSY on various projects has been incredible. Their dedication and professionalism are commendable.',
-      rating: 5
-    },
-    {
-      id: 3,
-      name: 'Rajesh Kumar',
-      role: 'Parent',
-      review: 'My daughter has grown tremendously since joining Rotaract. The values and skills she has learned are invaluable.',
-      rating: 5
+      image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=300&h=300&fit=crop',
+      caption: 'Blood Donation Camp'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white font-sans">
       <Header />
       
-      <div className="pt-20">
+      <div className="pt-24">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-black via-deep-base to-section-bg">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-accent-pink to-button-active bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-accent-pink to-button-active bg-clip-text text-transparent">
               Get In Touch
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Have questions about our club or want to collaborate? We'd love to hear from you.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto font-heading">
+              Ready to make a difference? Connect with us and be part of the change you want to see in the world.
             </p>
           </div>
         </section>
 
         {/* Contact Info & Form */}
-        <section className="py-20 bg-deep-base">
+        <section className="py-20 bg-section-bg">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Information */}
-              <div>
-                <h2 className="text-3xl font-bold mb-8 text-white">Contact Information</h2>
+              <div className="space-y-8">
+                <h2 className="text-3xl font-bold text-white mb-8 font-heading">
+                  Contact Information
+                </h2>
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin size={20} className="text-white" />
-                    </div>
+                    <MapPin className="w-6 h-6 text-accent-pink mt-1" />
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                      <p className="text-gray-300">
+                      <h3 className="font-semibold text-white mb-1 font-heading">Address</h3>
+                      <p className="text-gray-300 font-sans">
                         BMS Institute of Technology<br />
-                        Yelahanka, Bangalore - 560064<br />
-                        Karnataka, India
+                        Yelahanka, Bangalore - 560064
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone size={20} className="text-white" />
-                    </div>
+                    <Mail className="w-6 h-6 text-accent-pink mt-1" />
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                      <p className="text-gray-300">+91 99999 99999</p>
+                      <h3 className="font-semibold text-white mb-1 font-heading">Email</h3>
+                      <p className="text-gray-300 font-sans">rotaract.bmsy@gmail.com</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail size={20} className="text-white" />
-                    </div>
+                    <Phone className="w-6 h-6 text-accent-pink mt-1" />
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                      <p className="text-gray-300">rotaract@bmsinstitute.com</p>
+                      <h3 className="font-semibold text-white mb-1 font-heading">Phone</h3>
+                      <p className="text-gray-300 font-sans">+91 98765 43210</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center flex-shrink-0">
-                      <Clock size={20} className="text-white" />
-                    </div>
+                    <Clock className="w-6 h-6 text-accent-pink mt-1" />
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Office Hours</h3>
-                      <p className="text-gray-300">
-                        Monday - Friday: 9:00 AM - 5:00 PM<br />
-                        Saturday: 9:00 AM - 2:00 PM
-                      </p>
+                      <h3 className="font-semibold text-white mb-1 font-heading">Meeting Hours</h3>
+                      <p className="text-gray-300 font-sans">Every Friday, 4:00 PM - 6:00 PM</p>
                     </div>
                   </div>
                 </div>
-                
-                {/* Social Media */}
+
+                {/* Map */}
                 <div className="mt-8">
-                  <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
-                  <div className="flex space-x-4">
-                    <a 
-                      href="https://www.instagram.com/rota_bms/" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
-                    >
-                      <Instagram size={20} />
-                    </a>
-                    <a 
-                      href="#" 
-                      className="w-12 h-12 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
-                    >
-                      <Linkedin size={20} />
-                    </a>
+                  <div className="bg-gray-800 rounded-lg p-4 text-center">
+                    <div className="bg-gray-700 rounded h-48 flex items-center justify-center">
+                      <p className="text-gray-400 font-sans">Interactive Map Coming Soon</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Contact Form */}
-              <Card className="bg-black/50 border-accent-pink/20">
-                <CardContent className="p-8">
-                  <h2 className="text-3xl font-bold mb-6 text-white">Send Us a Message</h2>
-                  
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                        Full Name
-                      </label>
-                      <Input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        className="bg-white/10 border-accent-pink/30 text-white placeholder:text-gray-400 focus:border-accent-pink"
-                        placeholder="Enter your full name"
-                        required
-                      />
-                    </div>
+              <div>
+                <Card className="bg-black/50 border-accent-pink/20">
+                  <CardContent className="p-8">
+                    <h2 className="text-3xl font-bold text-white mb-6 font-heading">
+                      Send us a Message
+                    </h2>
                     
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address
-                      </label>
-                      <Input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        className="bg-white/10 border-accent-pink/30 text-white placeholder:text-gray-400 focus:border-accent-pink"
-                        placeholder="Enter your email address"
-                        required
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                        Message
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        rows={5}
-                        className="bg-white/10 border-accent-pink/30 text-white placeholder:text-gray-400 focus:border-accent-pink resize-none"
-                        placeholder="Tell us how we can help you..."
-                        required
-                      />
-                    </div>
-                    
-                    <Button 
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-purple-highlight to-button-active hover:from-button-active hover:to-purple-highlight text-white font-semibold py-3 transition-all duration-300"
-                    >
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Map Section */}
-        <section className="py-20 bg-section-bg">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Find Us
-              </h2>
-              <p className="text-xl text-gray-300">
-                Visit us at BMS Institute of Technology, Yelahanka
-              </p>
-            </div>
-            
-            <div className="bg-black/50 border border-accent-pink/20 rounded-lg overflow-hidden">
-              <div className="aspect-video w-full bg-gradient-to-r from-purple-highlight/20 to-button-active/20 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="mx-auto mb-4 text-accent-pink" size={48} />
-                  <h3 className="text-xl font-semibold text-white mb-2">Interactive Map</h3>
-                  <p className="text-gray-300">
-                    Google Maps integration will be embedded here
-                  </p>
-                </div>
+                    <form className="space-y-6">
+                      <div>
+                        <label className="block text-gray-300 mb-2 font-heading">Name</label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-accent-pink focus:outline-none font-sans"
+                          placeholder="Your full name"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-gray-300 mb-2 font-heading">Email</label>
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-accent-pink focus:outline-none font-sans"
+                          placeholder="your.email@example.com"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-gray-300 mb-2 font-heading">Message</label>
+                        <textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          rows={5}
+                          className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white focus:border-accent-pink focus:outline-none resize-none font-sans"
+                          placeholder="Tell us how you'd like to get involved..."
+                        />
+                      </div>
+                      
+                      <Button 
+                        type="submit"
+                        className="w-full bg-gradient-to-r from-accent-pink to-purple-highlight hover:from-purple-highlight hover:to-button-active text-white py-3 font-semibold font-heading rounded-lg"
+                      >
+                        Send Message
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -278,29 +207,21 @@ const Contact = () => {
         {/* Reviews Section */}
         <section className="py-20 bg-deep-base">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                What People Say
-              </h2>
-              <p className="text-xl text-gray-300">
-                Hear from our community members and partners
-              </p>
-            </div>
+            <h2 className="text-4xl font-bold text-center mb-12 text-white font-heading">
+              What Our Members Say
+            </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
-              {reviews.map((review) => (
-                <Card key={review.id} className="bg-black/50 border-accent-pink/20 hover:border-accent-pink/50 transition-all duration-300">
+              {reviews.map((review, index) => (
+                <Card key={index} className="bg-black/40 border-accent-pink/20 hover:border-accent-pink/50 transition-all duration-300">
                   <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
+                    <div className="flex mb-4">
                       {[...Array(review.rating)].map((_, i) => (
-                        <span key={i} className="text-yellow-400 text-xl">★</span>
+                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-gray-300 mb-4 italic">"{review.review}"</p>
-                    <div>
-                      <p className="text-white font-semibold">{review.name}</p>
-                      <p className="text-accent-pink text-sm">{review.role}</p>
-                    </div>
+                    <p className="text-gray-300 mb-4 italic font-sans">"{review.text}"</p>
+                    <p className="text-accent-pink font-semibold font-heading">- {review.name}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -311,35 +232,36 @@ const Contact = () => {
         {/* Instagram Grid */}
         <section className="py-20 bg-section-bg">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Follow Our Journey
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4 font-heading">
+                Follow Us on Instagram
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Check out our latest activities on Instagram
+              <p className="text-gray-300 mb-6 font-sans">
+                Stay updated with our latest activities and events
               </p>
-              <Button 
-                className="bg-gradient-to-r from-purple-highlight to-button-active hover:from-button-active hover:to-purple-highlight text-white font-semibold px-6 py-3"
-                onClick={() => window.open('https://www.instagram.com/rota_bms/', '_blank')}
+              <a 
+                href="https://www.instagram.com/rota_bms/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-accent-pink hover:text-button-active transition-colors font-heading font-semibold"
               >
-                <Instagram className="mr-2" size={20} />
-                Follow @rota_bms
-              </Button>
+                @rota_bms
+              </a>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {instagramPosts.map((post) => (
                 <div 
                   key={post.id}
-                  className="aspect-square relative overflow-hidden rounded-lg group cursor-pointer border-2 border-transparent hover:border-accent-pink transition-all duration-300"
+                  className="group cursor-pointer relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300"
                 >
                   <img 
-                    src={post.image} 
+                    src={post.image}
                     alt={post.caption}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-32 md:h-40 object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-white text-sm font-medium text-center px-2">
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2">
+                    <p className="text-white text-xs text-center font-sans">
                       {post.caption}
                     </p>
                   </div>

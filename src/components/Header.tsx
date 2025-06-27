@@ -19,12 +19,18 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+    // Scroll to top when navigating
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-accent-pink/10">
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-4">
+          <Link to="/" className="flex items-center space-x-4" onClick={handleNavClick}>
             <img 
               src="/lovable-uploads/dfeb900c-11c2-44c7-a969-fea7575cdb95.png" 
               alt="Rotaract Club of BMS Yelahanka" 
@@ -38,6 +44,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={handleNavClick}
                 className={`transition-all duration-300 font-medium font-heading text-sm tracking-wide ${
                   isActive(item.href) 
                     ? 'text-accent-pink border-b-2 border-accent-pink pb-1' 
@@ -47,7 +54,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Link to="/donate">
+            <Link to="/donate" onClick={handleNavClick}>
               <Button 
                 className="bg-gradient-to-r from-purple-highlight to-button-active hover:from-button-active hover:to-purple-highlight text-white px-6 py-2 font-semibold font-heading text-sm tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-button-active/30 rounded-full"
               >
@@ -78,14 +85,14 @@ const Header = () => {
                       ? 'text-accent-pink' 
                       : 'text-gray-300 hover:text-accent-pink'
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleNavClick}
                 >
                   {item.name}
                 </Link>
               ))}
-              <Link to="/donate" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/donate" onClick={handleNavClick}>
                 <Button 
-                  className="bg-gradient-to-r from-purple-highlight to-button-active text-white w-full mt-4 rounded-full"
+                  className="bg-gradient-to-r from-purple-highlight to-button-active text-white w-full mt-4 rounded-full font-heading"
                 >
                   Donate Now
                 </Button>

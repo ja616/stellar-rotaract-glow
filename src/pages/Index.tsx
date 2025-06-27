@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Heart, Lightbulb, Globe } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PolaroidBanner from '@/components/PolaroidBanner';
 
 const Index = () => {
   const [currentText, setCurrentText] = useState(0);
   const heroTexts = [
     "Service Above Self",
-    "Youth Leading Change",
+    "Youth Leading Change", 
     "Community First",
     "Building Tomorrow"
   ];
@@ -34,25 +35,21 @@ const Index = () => {
       icon: <Globe className="w-8 h-8" />,
       title: "Environment",
       description: "Sustainable living, tree plantation, and waste management initiatives for a greener tomorrow.",
-      gradient: "from-green-500 to-emerald-600"
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
-      title: "Education",
+      title: "Education", 
       description: "Digital literacy, scholarships, and educational resource distribution programs.",
-      gradient: "from-blue-500 to-cyan-600"
     },
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Health",
       description: "Health camps, blood donation drives, and mental wellness awareness campaigns.",
-      gradient: "from-red-500 to-pink-600"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Leadership",
       description: "Youth development workshops and leadership training for tomorrow's changemakers.",
-      gradient: "from-purple-500 to-violet-600"
     }
   ];
 
@@ -64,14 +61,14 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop"
     },
     {
-      date: "July 22",
+      date: "July 22", 
       title: "Digital Literacy Workshop",
       location: "BMS Institute",
       image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop"
     },
     {
-      date: "July 28",  
-      title: "Health & Wellness Camp",
+      date: "July 28",
+      title: "Health & Wellness Camp", 
       location: "Community Center",
       image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop"
     }
@@ -87,6 +84,18 @@ const Index = () => {
         
         <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
           <div className="space-y-8">
+            {/* Logo Section */}
+            <div className="flex justify-center items-center space-x-8 mb-8">
+              <img 
+                src="/lovable-uploads/dfeb900c-11c2-44c7-a969-fea7575cdb95.png" 
+                alt="Rotaract Club of BMS Yelahanka" 
+                className="h-20 w-auto"
+              />
+              <div className="text-4xl font-bold text-accent-pink">
+                3192
+              </div> 
+            </div>
+            
             <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-tight">
                 <span className="block text-white">Rotaract Club</span>
@@ -96,7 +105,7 @@ const Index = () => {
               </h1>
               
               <div className="h-12 flex items-center justify-center">
-                <p className="text-xl md:text-2xl font-heading font-medium text-accent-pink transition-all duration-1000">
+                <p className="text-xl md:text-2xl font-heading font-medium text-accent-pink">
                   {heroTexts[currentText]}
                 </p>
               </div>
@@ -148,6 +157,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Polaroid Banner */}
+      <PolaroidBanner />
 
       {/* Initiatives Section */}
       <section className="py-20 bg-deep-base">

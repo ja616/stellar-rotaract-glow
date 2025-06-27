@@ -35,7 +35,7 @@ const PolaroidBanner = () => {
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=300&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=300&h=300&fit=crop',
       caption: 'Blood Donation Drive',
       rotation: '-rotate-1'
     }
@@ -45,22 +45,22 @@ const PolaroidBanner = () => {
     <section className="py-20 bg-black overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-white">
             Moments That Matter
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto font-heading">
             Every picture tells a story of impact, community, and positive change.
           </p>
         </div>
         
         {/* Scrolling Polaroid Container */}
         <div className="relative">
-          <div className="flex animate-[scroll_30s_linear_infinite] hover:pause">
+          <div className="flex space-x-8 animate-[scroll_30s_linear_infinite] hover:pause">
             {/* First set */}
             {polaroids.map((polaroid) => (
               <div 
                 key={polaroid.id}
-                className={`flex-shrink-0 mx-4 transform ${polaroid.rotation} hover:rotate-0 hover:scale-110 transition-all duration-500 cursor-pointer group`}
+                className={`flex-shrink-0 transform ${polaroid.rotation} hover:rotate-0 hover:scale-110 transition-all duration-500 cursor-pointer group relative`}
               >
                 <div className="bg-white p-4 shadow-2xl rounded-lg border border-gray-200 hover:shadow-accent-pink/20 hover:shadow-2xl">
                   <img 
@@ -68,7 +68,7 @@ const PolaroidBanner = () => {
                     alt={polaroid.caption}
                     className="w-64 h-64 object-cover rounded mb-4"
                   />
-                  <p className="text-black text-center font-handwriting text-lg font-medium">
+                  <p className="text-black text-center font-heading text-lg font-medium">
                     {polaroid.caption}
                   </p>
                   {/* Tape effect */}
@@ -81,7 +81,7 @@ const PolaroidBanner = () => {
             {polaroids.map((polaroid) => (
               <div 
                 key={`duplicate-${polaroid.id}`}
-                className={`flex-shrink-0 mx-4 transform ${polaroid.rotation} hover:rotate-0 hover:scale-110 transition-all duration-500 cursor-pointer group`}
+                className={`flex-shrink-0 transform ${polaroid.rotation} hover:rotate-0 hover:scale-110 transition-all duration-500 cursor-pointer group relative`}
               >
                 <div className="bg-white p-4 shadow-2xl rounded-lg border border-gray-200 hover:shadow-accent-pink/20 hover:shadow-2xl">
                   <img 
@@ -89,7 +89,7 @@ const PolaroidBanner = () => {
                     alt={polaroid.caption}
                     className="w-64 h-64 object-cover rounded mb-4"
                   />
-                  <p className="text-black text-center font-handwriting text-lg font-medium">
+                  <p className="text-black text-center font-heading text-lg font-medium">
                     {polaroid.caption}
                   </p>
                   {/* Tape effect */}
@@ -100,6 +100,17 @@ const PolaroidBanner = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 };
