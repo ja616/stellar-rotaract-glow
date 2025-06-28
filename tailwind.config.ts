@@ -98,6 +98,22 @@ export default {
             transform: 'translateX(0)',
           },
         },
+        "scroll-fast": {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(-50%)',
+          },
+        },
+        "scroll-reverse-fast": {
+          '0%': {
+            transform: 'translateX(-50%)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          },
+        },
         "fade-in": {
           "0%": {
             opacity: "0",
@@ -130,6 +146,8 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         scroll: "scroll 20s linear infinite",
         "scroll-reverse": "scroll-reverse 25s linear infinite",
+        "scroll-fast": "scroll-fast 15s linear infinite",
+        "scroll-reverse-fast": "scroll-reverse-fast 18s linear infinite",
         "fade-in": "fade-in 0.8s ease-out forwards",
         "float": "float 6s ease-in-out infinite",
         "glow": "glow 2s ease-in-out infinite",

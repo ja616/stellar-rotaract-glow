@@ -6,6 +6,7 @@ import { ArrowRight, Users, Heart, Lightbulb, Globe } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PolaroidBanner from '@/components/PolaroidBanner';
+import StatsSection from '@/components/StatsSection';
 
 const Index = () => {
   const [currentText, setCurrentText] = useState(0);
@@ -61,35 +62,39 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-purple/20 via-deep-base to-purple-accent/20"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-accent-pink/10 rounded-full blur-3xl animate-glow"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-bright-purple/10 rounded-full blur-3xl animate-glow delay-1000"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-accent-pink/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-bright-purple/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        {/* Left Side Stats */}
-        <div className="hidden lg:flex absolute left-8 top-1/2 transform -translate-y-1/2 flex-col space-y-8">
+        {/* Left Side Stats - Desktop */}
+        <div className="hidden xl:flex absolute left-12 top-1/2 transform -translate-y-1/2 flex-col space-y-12">
           {stats.slice(0, 2).map((stat, index) => (
-            <div key={index} className="text-center group transform hover:scale-110 transition-all duration-500 animate-float">
-              <div className="mb-4 text-3xl animate-bounce">{stat.icon}</div>
-              <div className="text-2xl font-bold text-white mb-2 group-hover:text-accent-pink transition-colors duration-300">
-                {stat.number}
-              </div>
-              <div className="text-gray-400 font-medium text-sm">
-                {stat.label}
+            <div key={index} className="text-center group transform hover:scale-110 transition-all duration-500">
+              <div className="bg-gradient-to-br from-dark-accent/30 to-purple-accent/30 backdrop-blur-sm rounded-2xl p-6 border border-accent-pink/20 hover:border-accent-pink/50 transition-all duration-300">
+                <div className="mb-4 text-3xl">{stat.icon}</div>
+                <div className="text-3xl font-bold text-white mb-2 group-hover:text-accent-pink transition-colors duration-300">
+                  {stat.number}
+                </div>
+                <div className="text-gray-400 font-medium text-sm">
+                  {stat.label}
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Right Side Stats */}
-        <div className="hidden lg:flex absolute right-8 top-1/2 transform -translate-y-1/2 flex-col space-y-8">
+        {/* Right Side Stats - Desktop */}
+        <div className="hidden xl:flex absolute right-12 top-1/2 transform -translate-y-1/2 flex-col space-y-12">
           {stats.slice(2, 4).map((stat, index) => (
-            <div key={index} className="text-center group transform hover:scale-110 transition-all duration-500 animate-float delay-300">
-              <div className="mb-4 text-3xl animate-bounce">{stat.icon}</div>
-              <div className="text-2xl font-bold text-white mb-2 group-hover:text-accent-pink transition-colors duration-300">
-                {stat.number}
-              </div>
-              <div className="text-gray-400 font-medium text-sm">
-                {stat.label}
+            <div key={index} className="text-center group transform hover:scale-110 transition-all duration-500">
+              <div className="bg-gradient-to-br from-dark-accent/30 to-purple-accent/30 backdrop-blur-sm rounded-2xl p-6 border border-accent-pink/20 hover:border-accent-pink/50 transition-all duration-300">
+                <div className="mb-4 text-3xl">{stat.icon}</div>
+                <div className="text-3xl font-bold text-white mb-2 group-hover:text-accent-pink transition-colors duration-300">
+                  {stat.number}
+                </div>
+                <div className="text-gray-400 font-medium text-sm">
+                  {stat.label}
+                </div>
               </div>
             </div>
           ))}
@@ -98,17 +103,17 @@ const Index = () => {
         <div className="container mx-auto px-6 text-center relative z-10 max-w-4xl">
           <div className="space-y-8 animate-fade-in">
             {/* Logo Section */}
-            <div className="flex justify-center items-center space-x-8 mb-8 transform hover:scale-105 transition-all duration-700">
+            <div className="flex justify-center items-center mb-8 transform hover:scale-105 transition-all duration-700">
               <img 
                 src="/lovable-uploads/5d412404-e118-4763-a5fb-69304897cc03.png" 
                 alt="Rotaract Club Logos" 
-                className="h-24 w-auto animate-fade-in delay-300"
+                className="h-16 md:h-20 lg:h-24 w-auto animate-fade-in delay-300"
               />
             </div>
             
             <div className="space-y-8">              
               <div className="h-16 flex items-center justify-center">
-                <p className="text-2xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-accent-pink via-pink-bright to-bright-purple bg-clip-text animate-glow">
+                <p className="text-2xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-accent-pink via-pink-bright to-bright-purple bg-clip-text">
                   {heroTexts[currentText]}
                 </p>
               </div>
@@ -142,17 +147,19 @@ const Index = () => {
         </div>
 
         {/* Mobile Stats */}
-        <div className="lg:hidden absolute bottom-8 left-0 right-0">
+        <div className="xl:hidden absolute bottom-8 left-0 right-0">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center group transform hover:scale-110 transition-all duration-500">
-                  <div className="mb-2 text-2xl animate-bounce">{stat.icon}</div>
-                  <div className="text-lg font-bold text-white mb-1 group-hover:text-accent-pink transition-colors duration-300">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-400 font-medium text-xs">
-                    {stat.label}
+                  <div className="bg-gradient-to-br from-dark-accent/30 to-purple-accent/30 backdrop-blur-sm rounded-xl p-4 border border-accent-pink/20 hover:border-accent-pink/50 transition-all duration-300">
+                    <div className="mb-2 text-xl">{stat.icon}</div>
+                    <div className="text-lg font-bold text-white mb-1 group-hover:text-accent-pink transition-colors duration-300">
+                      {stat.number}
+                    </div>
+                    <div className="text-gray-400 font-medium text-xs">
+                      {stat.label}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -177,13 +184,10 @@ const Index = () => {
             <div className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-accent-pink/20 hover:border-accent-pink/40 transition-all duration-500 transform hover:scale-105">
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <p className="text-lg">
-                  The Rotaract Club of BMS Institute of Technology, Yelahanka, stands as a beacon of youth empowerment and community service. As part of the global Rotaract movement, we embody the spirit of "Service Above Self" while fostering leadership, fellowship, and positive change.
+                  The Rotaract Club of BMS Institute of Technology, Yelahanka, stands as a beacon of youth empowerment and community service. We embody the spirit of "Service Above Self" while fostering leadership and positive change.
                 </p>
                 <p className="text-lg">
-                  Founded with the vision to create meaningful impact in our community, our club brings together passionate young minds who believe in the power of collective action. We focus on sustainable development, education, health, and environmental conservation through innovative projects and partnerships.
-                </p>
-                <p className="text-lg">
-                  Our journey is marked by countless success stories - from organizing health camps and educational workshops to leading environmental initiatives and community development programs. Each project reflects our commitment to building a better tomorrow for all.
+                  Our club brings together passionate young minds who believe in collective action. We focus on sustainable development, education, health, and environmental conservation through innovative projects and partnerships.
                 </p>
                 <div className="mt-8 text-center">
                   <Link to="/team">
@@ -202,6 +206,9 @@ const Index = () => {
 
       {/* Moments That Matter (Polaroid Banner) */}
       <PolaroidBanner />
+
+      {/* Stats Section */}
+      <StatsSection />
 
       {/* Initiatives Section */}
       <section className="py-20 bg-gradient-to-br from-deep-base via-section-bg to-deep-base">

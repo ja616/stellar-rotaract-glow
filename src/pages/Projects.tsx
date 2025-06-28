@@ -7,119 +7,138 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const Projects = () => {
-  const projectYears = [
+  const currentProjects = [
     {
-      year: "2024",
-      projects: [
-        {
-          id: 1,
-          image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
-          title: 'Tree Plantation Drive'
-        },
-        {
-          id: 2,
-          image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop',
-          title: 'Tech Workshop'
-        },
-        {
-          id: 3,
-          image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop',
-          title: 'Health Camp'
-        },
-        {
-          id: 4,
-          image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop',
-          title: 'Leadership Summit'
-        },
-        {
-          id: 5,
-          image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop',
-          title: 'Digital Literacy'
-        },
-        {
-          id: 6,
-          image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=300&fit=crop',
-          title: 'Blood Donation'
-        }
+      id: 1,
+      title: "Digital Literacy Initiative",
+      summary: "Empowering seniors with digital skills for the modern world",
+      mainImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+      galleryImages: [
+        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=300&h=200&fit=crop"
       ]
     },
     {
-      year: "2023", 
+      id: 2,
+      title: "Clean Water Initiative",
+      summary: "Installing water purification systems in rural communities",
+      mainImage: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop",
+      galleryImages: [
+        "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?w=300&h=200&fit=crop"
+      ]
+    },
+    {
+      id: 3,
+      title: "Youth Leadership Summit",
+      summary: "Building tomorrow's leaders through mentorship and training",
+      mainImage: "https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop",
+      galleryImages: [
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=200&fit=crop"
+      ]
+    },
+    {
+      id: 4,
+      title: "Environmental Conservation",
+      summary: "Tree plantation and sustainable living awareness campaigns",
+      mainImage: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop",
+      galleryImages: [
+        "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=300&h=200&fit=crop"
+      ]
+    },
+    {
+      id: 5,
+      title: "Health & Wellness Drive",
+      summary: "Community health camps and mental wellness awareness",
+      mainImage: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop",
+      galleryImages: [
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1584515933487-779824d29309?w=300&h=200&fit=crop"
+      ]
+    },
+    {
+      id: 6,
+      title: "Educational Outreach",
+      summary: "Scholarship programs and resource distribution to underprivileged",
+      mainImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
+      galleryImages: [
+        "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1544531586-ffd0d8479129?w=300&h=200&fit=crop",
+        "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=300&h=200&fit=crop"
+      ]
+    }
+  ];
+
+  const previousProjects = [
+    {
+      year: "2023-24",
       projects: [
         {
           id: 7,
           image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop',
-          title: 'Community Service'
+          title: 'Community Service Initiative'
         },
         {
           id: 8,
           image: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&h=300&fit=crop',
-          title: 'Environment Drive'
+          title: 'Environment Conservation Drive'
         },
         {
           id: 9,
           image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=400&h=300&fit=crop',
-          title: 'Youth Development'
+          title: 'Youth Development Program'
         },
         {
           id: 10,
           image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
-          title: 'Skill Building'
+          title: 'Skill Building Workshop'
         }
       ]
     },
     {
-      year: "2022",
+      year: "2022-23",
       projects: [
         {
           id: 11,
           image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop',
-          title: 'Social Impact'
+          title: 'Social Impact Project'
         },
         {
           id: 12,
           image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop',
-          title: 'Educational Support'
+          title: 'Educational Support Program'
         },
         {
           id: 13,
           image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop',
-          title: 'Community Outreach'
+          title: 'Community Outreach Initiative'
         }
       ]
     }
   ];
 
-  const ongoingProjects = [
-    {
-      id: 1,
-      title: 'Digital Literacy for Seniors',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
-      description: 'Teaching basic computer and smartphone skills to elderly citizens.'
-    },
-    {
-      id: 2,
-      title: 'Clean Water Initiative',
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
-      description: 'Installing water purification systems and conducting awareness programs.'
-    },
-    {
-      id: 3,
-      title: 'Skill Development Workshops',
-      image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop',
-      description: 'Conducting workshops on coding, entrepreneurship, and communication.'
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-black text-white font-sans">
+    <div className="min-h-screen text-white font-sans" style={{ backgroundColor: '#0A0A0A' }}>
       <Header />
       
       <div className="pt-24">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-black via-deep-base to-section-bg">
+        <section className="py-20 bg-gradient-to-br from-deep-base via-section-bg to-dark-purple">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-accent-pink to-button-active bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-accent-pink to-bright-purple bg-clip-text text-transparent">
               Our Projects
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto font-heading">
@@ -129,15 +148,15 @@ const Projects = () => {
         </section>
 
         {/* Projects Tabs */}
-        <section className="py-20 bg-section-bg">
+        <section className="py-20" style={{ backgroundColor: '#060103' }}>
           <div className="container mx-auto px-6">
-            <Tabs defaultValue="ongoing" className="w-full">
+            <Tabs defaultValue="current" className="w-full">
               <TabsList className="grid w-full grid-cols-2 mb-12 bg-black/50 border border-accent-pink/20">
                 <TabsTrigger 
-                  value="ongoing" 
+                  value="current" 
                   className="data-[state=active]:bg-accent-pink data-[state=active]:text-white font-heading"
                 >
-                  Ongoing Projects
+                  Projects of the Year 2025-26
                 </TabsTrigger>
                 <TabsTrigger 
                   value="previous"
@@ -147,13 +166,19 @@ const Projects = () => {
                 </TabsTrigger>
               </TabsList>
               
-              <TabsContent value="ongoing">
-                <div className="grid md:grid-cols-3 gap-8">
-                  {ongoingProjects.map((project) => (
-                    <Card key={project.id} className="bg-black/50 border-accent-pink/20 hover:border-accent-pink/50 transition-all duration-300 group">
+              <TabsContent value="current">
+                <div className="mb-12 text-center">
+                  <h2 className="text-2xl font-bold mb-6" style={{ color: '#FF2E88' }}>
+                    Projects of the Year 2025–26
+                  </h2>
+                </div>
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {currentProjects.map((project) => (
+                    <Card key={project.id} className="border border-accent-pink/20 hover:border-accent-pink/50 transition-all duration-300 group hover:shadow-lg" style={{ backgroundColor: '#241121', borderRadius: '12px' }}>
                       <div className="relative overflow-hidden">
                         <img 
-                          src={project.image} 
+                          src={project.mainImage} 
                           alt={project.title}
                           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                         />
@@ -161,12 +186,28 @@ const Projects = () => {
                           <Badge className="bg-green-500 text-white font-heading">Active</Badge>
                         </div>
                       </div>
-                      <CardContent className="p-6">
-                        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-accent-pink transition-colors font-heading">
+                      
+                      {/* Image Gallery Strip */}
+                      <div className="px-4 py-2">
+                        <div className="flex space-x-2 overflow-x-auto scrollbar-hide" style={{ height: '100px' }}>
+                          {project.galleryImages.map((img, index) => (
+                            <img
+                              key={index}
+                              src={img}
+                              alt={`${project.title} ${index + 1}`}
+                              className="flex-shrink-0 w-20 h-16 object-cover rounded cursor-pointer hover:opacity-80 transition-opacity duration-300"
+                              style={{ minWidth: '80px' }}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <CardContent className="p-6 pt-4">
+                        <h3 className="font-bold mb-3 text-white group-hover:text-accent-pink transition-colors font-heading" style={{ fontSize: '1.3rem', color: '#FF2E88' }}>
                           {project.title}
                         </h3>
-                        <p className="text-gray-300 text-sm leading-relaxed font-sans">
-                          {project.description}
+                        <p className="text-sm leading-relaxed font-sans font-medium italic" style={{ color: '#EAEAEA' }}>
+                          {project.summary}
                         </p>
                       </CardContent>
                     </Card>
@@ -176,7 +217,7 @@ const Projects = () => {
               
               <TabsContent value="previous">
                 <div className="space-y-12">
-                  {projectYears.map((yearData) => (
+                  {previousProjects.map((yearData) => (
                     <div key={yearData.year}>
                       <h3 className="text-3xl font-bold text-center mb-8 text-accent-pink font-heading">
                         {yearData.year}
@@ -212,6 +253,16 @@ const Projects = () => {
       </div>
 
       <Footer />
+
+      <style jsx>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </div>
   );
 };
