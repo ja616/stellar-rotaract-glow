@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -49,7 +50,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-deep-base via-section-bg to-deep-base text-white font-poppins overflow-x-hidden">
       <Header />
-
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-purple/20 via-deep-base to-purple-accent/20"></div>
@@ -57,9 +58,9 @@ const Index = () => {
           <div className="absolute top-20 left-20 w-72 h-72 bg-purple-highlight/10 rounded-full blur-3xl animate-glow"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-bright-purple/10 rounded-full blur-3xl animate-glow delay-1000"></div>
         </div>
-
-        <div className="container mx-auto px-6 text-center relative z-10 max-w-7xl flex-1 flex flex-col justify-center items-center space-y-8">
-          <div className="w-full max-w-3xl animate-fade-in">
+        
+        <div className="container mx-auto px-6 text-center relative z-10 max-w-4xl flex-1 flex flex-col justify-center">
+          <div className="space-y-6 animate-fade-in">
             {/* Logo Section */}
             <div className="flex justify-center items-center mb-6 transform hover:scale-105 transition-all duration-700">
               <img 
@@ -68,19 +69,19 @@ const Index = () => {
                 className="h-16 md:h-20 w-auto animate-fade-in delay-300"
               />
             </div>
-
+            
             <div className="space-y-6">              
               <div className="h-12 flex items-center justify-center">
-                <p className="text-2xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-purple-highlight via-bright-purple to-button-active bg-clip-text animate-glow">
+                <p className="text-xl md:text-3xl font-bold text-transparent bg-gradient-to-r from-purple-highlight via-bright-purple to-button-active bg-clip-text animate-glow">
                   {heroTexts[currentText]}
                 </p>
               </div>
-
+              
               <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light leading-relaxed opacity-0 animate-fade-in delay-500">
                 Empowering youth to create positive change in our community through service, leadership, and fellowship.
               </p>
             </div>
-
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 opacity-0 animate-fade-in delay-700">
               <Link to="/join">
                 <Button 
@@ -119,7 +120,7 @@ const Index = () => {
               Discover who we are and what drives our mission to serve
             </p>
           </div>
-
+          
           <div className="max-w-3xl mx-auto">
             <div className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-purple-highlight/20 hover:border-purple-highlight/40 transition-all duration-500">
               <div className="space-y-4 text-gray-300 leading-relaxed">
@@ -158,7 +159,7 @@ const Index = () => {
               Four key pillars that drive our mission to create lasting positive change
             </p>
           </div>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {initiatives.map((initiative, index) => (
               <div 
