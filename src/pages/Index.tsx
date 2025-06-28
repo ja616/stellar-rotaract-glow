@@ -51,8 +51,8 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-deep-base via-section-bg to-deep-base text-white font-poppins overflow-x-hidden">
       <Header />
       
-      {/* Hero Section - Reduced padding and gaps */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-12">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-purple/20 via-deep-base to-purple-accent/20"></div>
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-purple-highlight/10 rounded-full blur-3xl animate-glow"></div>
@@ -60,29 +60,29 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-6 text-center relative z-10 max-w-4xl flex-1 flex flex-col justify-center">
-          <div className="space-y-4 animate-fade-in">
-            {/* Logo Section - Reduced margin */}
-            <div className="flex justify-center items-center mb-4 transform hover:scale-105 transition-all duration-700">
+          <div className="space-y-6 animate-fade-in">
+            {/* Logo Section */}
+            <div className="flex justify-center items-center mb-6 transform hover:scale-105 transition-all duration-700">
               <img 
                 src="/lovable-uploads/5d412404-e118-4763-a5fb-69304897cc03.png" 
                 alt="Rotaract Club Logos" 
-                className="h-14 md:h-16 w-auto animate-fade-in delay-300"
+                className="h-16 md:h-20 w-auto animate-fade-in delay-300"
               />
             </div>
             
-            <div className="space-y-4">              
-              <div className="h-10 flex items-center justify-center">
-                <p className="text-lg md:text-2xl font-bold text-transparent bg-gradient-to-r from-purple-highlight via-bright-purple to-button-active bg-clip-text animate-glow">
+            <div className="space-y-6">              
+              <div className="h-12 flex items-center justify-center">
+                <p className="text-xl md:text-3xl font-bold text-transparent bg-gradient-to-r from-purple-highlight via-bright-purple to-button-active bg-clip-text animate-glow">
                   {heroTexts[currentText]}
                 </p>
               </div>
               
-              <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto font-light leading-relaxed opacity-0 animate-fade-in delay-500">
+              <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light leading-relaxed opacity-0 animate-fade-in delay-500">
                 Empowering youth to create positive change in our community through service, leadership, and fellowship.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 opacity-0 animate-fade-in delay-700">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 opacity-0 animate-fade-in delay-700">
               <Link to="/join">
                 <Button 
                   size="lg"
@@ -106,30 +106,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section - Reduced top padding */}
-      <div className="py-6">
-        <StatsSection />
-      </div>
+      {/* Stats Section */}
+      <StatsSection />
 
-      {/* About Us Section - Reduced content and padding */}
-      <section className="py-12 bg-gradient-to-r from-section-bg via-dark-purple to-section-bg">
+      {/* About Us Section */}
+      <section className="py-16 bg-gradient-to-r from-section-bg via-dark-purple to-section-bg">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
               About Us
             </h2>
-            <p className="text-base text-gray-300 max-w-2xl mx-auto font-light">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto font-light">
               Discover who we are and what drives our mission to serve
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto">
-            <div className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-3xl p-6 border border-purple-highlight/20 hover:border-purple-highlight/40 transition-all duration-500">
-              <div className="space-y-3 text-gray-300 leading-relaxed">
-                <p className="text-sm md:text-base">
-                  The Rotaract Club of BMS Institute of Technology, Yelahanka, stands as a beacon of youth empowerment and community service, embodying "Service Above Self" while fostering leadership and positive change.
+            <div className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-purple-highlight/20 hover:border-purple-highlight/40 transition-all duration-500">
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p className="text-base">
+                  The Rotaract Club of BMS Institute of Technology, Yelahanka, stands as a beacon of youth empowerment and community service. We embody the spirit of "Service Above Self" while fostering leadership and positive change.
                 </p>
-                <div className="mt-4 text-center">
+                <p className="text-base">
+                  Our journey is marked by impactful projects - from health camps and educational workshops to environmental initiatives and community development programs, reflecting our commitment to building a better tomorrow.
+                </p>
+                <div className="mt-6 text-center">
                   <Link to="/team">
                     <Button 
                       className="bg-gradient-to-r from-bright-purple to-button-active hover:from-purple-highlight hover:to-bright-purple text-white px-6 py-2 font-semibold rounded-full transform hover:scale-110 transition-all duration-300"
@@ -148,13 +149,13 @@ const Index = () => {
       <PolaroidBanner />
 
       {/* Initiatives Section */}
-      <section className="py-12 bg-gradient-to-br from-deep-base via-section-bg to-deep-base">
+      <section className="py-16 bg-gradient-to-br from-deep-base via-section-bg to-deep-base">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
               Our Impact Areas
             </h2>
-            <p className="text-base text-gray-300 max-w-2xl mx-auto font-light">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto font-light">
               Four key pillars that drive our mission to create lasting positive change
             </p>
           </div>
@@ -180,13 +181,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Call to Action - Reduced padding */}
-      <section className="py-12 bg-gradient-to-br from-deep-base via-dark-purple/20 to-deep-base">
+      {/* Call to Action */}
+      <section className="py-16 bg-gradient-to-br from-deep-base via-dark-purple/20 to-deep-base">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
             Ready to Make an Impact?
           </h2>
-          <p className="text-base text-gray-300 mb-6 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
             Join a community of passionate young leaders committed to creating positive change. 
             Your journey of service and growth starts here.
           </p>

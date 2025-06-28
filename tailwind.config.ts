@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -49,7 +50,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
-          pink: "#ac2255",
+          pink: "#7c3aed",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -63,12 +64,12 @@ export default {
         'section-bg': '#060103',
         'dark-purple': '#1c050f',
         'purple-accent': '#54102a',
-        'bright-purple': '#920dc3',
-        'pink-bright': '#de0c96',
+        'bright-purple': '#7c3aed',
+        'pink-bright': '#8b5cf6',
         'dark-accent': '#410744',
-        'button-active': '#ac2255',
-        'maroon-accent': '#54102a',
-        'purple-highlight': '#920dc3',
+        'button-active': '#a855f7',
+        'maroon-accent': '#4c1d95',
+        'purple-highlight': '#6366f1',
       },
       borderRadius: {
         lg: "var(--radius)",
