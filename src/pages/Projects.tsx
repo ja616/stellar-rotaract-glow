@@ -94,20 +94,57 @@ const Projects = () => {
     {
       id: 1,
       title: 'Digital Literacy for Seniors',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
-      description: 'Teaching basic computer and smartphone skills to elderly citizens.'
+      images: [
+        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop'
+      ],
+      description: 'Teaching basic computer and smartphone skills to elderly citizens in our community.'
     },
     {
       id: 2,
       title: 'Clean Water Initiative',
-      image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
+      images: [
+        'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop'
+      ],
       description: 'Installing water purification systems and conducting awareness programs.'
     },
     {
       id: 3,
       title: 'Skill Development Workshops',
-      image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop',
-      description: 'Conducting workshops on coding, entrepreneurship, and communication.'
+      images: [
+        'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop'
+      ],
+      description: 'Conducting workshops on coding, entrepreneurship, and communication skills.'
+    },
+    {
+      id: 4,
+      title: 'Health and Wellness Program',
+      images: [
+        'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop'
+      ],
+      description: 'Regular health checkups and wellness programs for underprivileged communities.'
+    },
+    {
+      id: 5,
+      title: 'Environmental Conservation',
+      images: [
+        'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop'
+      ],
+      description: 'Tree plantation drives and plastic waste management initiatives.'
     }
   ];
 
@@ -119,7 +156,7 @@ const Projects = () => {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-black via-deep-base to-section-bg">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-accent-pink to-button-active bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-purple-highlight to-button-active bg-clip-text text-transparent">
               Our Projects
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto font-heading">
@@ -132,44 +169,56 @@ const Projects = () => {
         <section className="py-20 bg-section-bg">
           <div className="container mx-auto px-6">
             <Tabs defaultValue="ongoing" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 mb-12 bg-black/50 border border-accent-pink/20">
+              <TabsList className="grid w-full grid-cols-2 mb-12 bg-black/50 border border-purple-highlight/20">
                 <TabsTrigger 
                   value="ongoing" 
-                  className="data-[state=active]:bg-accent-pink data-[state=active]:text-white font-heading"
+                  className="data-[state=active]:bg-purple-highlight data-[state=active]:text-white font-heading"
                 >
-                  Ongoing Projects
+                  Projects of the Year 2025-26
                 </TabsTrigger>
                 <TabsTrigger 
                   value="previous"
-                  className="data-[state=active]:bg-accent-pink data-[state=active]:text-white font-heading"
+                  className="data-[state=active]:bg-purple-highlight data-[state=active]:text-white font-heading"
                 >
                   Previous Projects
                 </TabsTrigger>
               </TabsList>
               
               <TabsContent value="ongoing">
-                <div className="grid md:grid-cols-3 gap-8">
-                  {ongoingProjects.map((project) => (
-                    <Card key={project.id} className="bg-black/50 border-accent-pink/20 hover:border-accent-pink/50 transition-all duration-300 group">
-                      <div className="relative overflow-hidden">
-                        <img 
-                          src={project.image} 
-                          alt={project.title}
-                          className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute top-4 left-4">
-                          <Badge className="bg-green-500 text-white font-heading">Active</Badge>
+                <div className="space-y-12">
+                  {ongoingProjects.map((project, index) => (
+                    <div 
+                      key={project.id} 
+                      className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
+                    >
+                      {/* Images Section */}
+                      <div className="w-full lg:w-1/2">
+                        <div className="grid grid-cols-2 gap-4">
+                          {project.images.slice(0, 4).map((image, imgIndex) => (
+                            <div key={imgIndex} className="relative overflow-hidden rounded-lg group">
+                              <img 
+                                src={image} 
+                                alt={`${project.title} ${imgIndex + 1}`}
+                                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                              />
+                            </div>
+                          ))}
                         </div>
                       </div>
-                      <CardContent className="p-6">
-                        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-accent-pink transition-colors font-heading">
+
+                      {/* Content Section */}
+                      <div className="w-full lg:w-1/2 space-y-6">
+                        <div className="flex items-center gap-4">
+                          <Badge className="bg-green-500 text-white font-heading px-4 py-2">Active</Badge>
+                        </div>
+                        <h3 className="text-3xl font-bold text-purple-highlight font-heading">
                           {project.title}
                         </h3>
-                        <p className="text-gray-300 text-sm leading-relaxed font-sans">
+                        <p className="text-gray-300 text-lg leading-relaxed font-sans">
                           {project.description}
                         </p>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </TabsContent>
@@ -178,7 +227,7 @@ const Projects = () => {
                 <div className="space-y-12">
                   {projectYears.map((yearData) => (
                     <div key={yearData.year}>
-                      <h3 className="text-3xl font-bold text-center mb-8 text-accent-pink font-heading">
+                      <h3 className="text-3xl font-bold text-center mb-8 text-purple-highlight font-heading">
                         {yearData.year}
                       </h3>
                       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -187,7 +236,7 @@ const Projects = () => {
                             key={project.id}
                             className="group cursor-pointer"
                           >
-                            <div className="relative overflow-hidden rounded-lg border-2 border-transparent hover:border-accent-pink/50 transition-all duration-300">
+                            <div className="relative overflow-hidden rounded-lg border-2 border-transparent hover:border-purple-highlight/50 transition-all duration-300">
                               <img 
                                 src={project.image}
                                 alt={project.title}
