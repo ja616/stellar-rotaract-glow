@@ -12,19 +12,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-footer-shadow text-white">
+    <footer className="bg-section-bg text-white border-t border-accent-pink/20">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Club Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-accent-pink to-purple-highlight rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">R</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Rotaract BMSY</h3>
-                <p className="text-sm text-gray-400">Service Above Self</p>
-              </div>
+              <img 
+                src="/lovable-uploads/f993c44b-d4fd-4f34-bca0-651a08316ee6.png" 
+                alt="Rotaract Club of BMS Yelahanka" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-300 leading-relaxed">
               Empowering youth to create positive change in the community through service, leadership, and fellowship.
@@ -65,13 +63,13 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="w-10 h-10 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+                className="w-10 h-10 bg-gradient-to-r from-accent-pink to-bright-purple rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
               >
                 <Instagram size={20} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 bg-gradient-to-r from-purple-highlight to-button-active rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+                className="w-10 h-10 bg-gradient-to-r from-accent-pink to-bright-purple rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
               >
                 <Linkedin size={20} />
               </a>
@@ -80,7 +78,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-purple-highlight/20 mt-12 pt-8 text-center">
+        <div className="border-t border-accent-pink/20 mt-12 pt-8 text-center">
           <p className="text-gray-400">
             © 2024 Rotaract Club of BMS Institute of Technology, Yelahanka. All rights reserved.
           </p>

@@ -50,7 +50,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
-          pink: "#E11D48",
+          pink: "#ac2255",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -60,10 +60,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        'deep-base': '#0A0A0A',
-        'section-bg': '#1A1A1A',
-        'purple-highlight': '#9333EA',
-        'button-active': '#7C3AED',
+        'deep-base': '#000000',
+        'section-bg': '#060103',
+        'dark-purple': '#1c050f',
+        'purple-accent': '#54102a',
+        'bright-purple': '#920dc3',
+        'pink-bright': '#de0c96',
+        'dark-accent': '#410744',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -87,6 +90,14 @@ export default {
             transform: 'translateX(-50%)',
           },
         },
+        "scroll-reverse": {
+          '0%': {
+            transform: 'translateX(-50%)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          },
+        },
         "fade-in": {
           "0%": {
             opacity: "0",
@@ -97,12 +108,31 @@ export default {
             transform: "translateY(0)"
           }
         },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)"
+          },
+          "50%": {
+            transform: "translateY(-20px)"
+          }
+        },
+        "glow": {
+          "0%, 100%": {
+            opacity: "1"
+          },
+          "50%": {
+            opacity: "0.5"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        scroll: "scroll 30s linear infinite",
+        scroll: "scroll 20s linear infinite",
+        "scroll-reverse": "scroll-reverse 25s linear infinite",
         "fade-in": "fade-in 0.8s ease-out forwards",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite",
       },
     },
   },
