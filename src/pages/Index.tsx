@@ -52,41 +52,41 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16">
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-8">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-purple/20 via-deep-base to-purple-accent/20"></div>
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-purple-highlight/10 rounded-full blur-3xl animate-glow"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-bright-purple/10 rounded-full blur-3xl animate-glow delay-1000"></div>
         </div>
         
-        <div className="container mx-auto px-6 text-center relative z-10 max-w-4xl flex-1 flex flex-col justify-center">
-          <div className="space-y-6 animate-fade-in">
+        <div className="container mx-auto px-6 text-center relative z-10 max-w-4xl flex-1 flex flex-col justify-center -mt-8">
+          <div className="space-y-4 animate-fade-in">
             {/* Logo Section */}
-            <div className="flex justify-center items-center mb-6 transform hover:scale-105 transition-all duration-700">
+            <div className="flex justify-center items-center mb-4 transform hover:scale-105 transition-all duration-700">
               <img 
                 src="/lovable-uploads/5d412404-e118-4763-a5fb-69304897cc03.png" 
                 alt="Rotaract Club Logos" 
-                className="h-16 md:h-20 w-auto animate-fade-in delay-300"
+                className="h-14 md:h-16 w-auto animate-fade-in delay-300"
               />
             </div>
             
-            <div className="space-y-6">              
-              <div className="h-12 flex items-center justify-center">
-                <p className="text-xl md:text-3xl font-bold text-transparent bg-gradient-to-r from-purple-highlight via-bright-purple to-button-active bg-clip-text animate-glow">
+            <div className="space-y-4">              
+              <div className="h-10 flex items-center justify-center">
+                <p className="text-lg md:text-2xl font-bold text-transparent bg-gradient-to-r from-purple-highlight via-bright-purple to-button-active bg-clip-text animate-glow">
                   {heroTexts[currentText]}
                 </p>
               </div>
               
-              <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light leading-relaxed opacity-0 animate-fade-in delay-500">
+              <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto font-light leading-relaxed opacity-0 animate-fade-in delay-500">
                 Empowering youth to create positive change in our community through service, leadership, and fellowship.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 opacity-0 animate-fade-in delay-700">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-4 opacity-0 animate-fade-in delay-700">
               <Link to="/join">
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-bright-purple to-button-active hover:from-purple-highlight hover:to-bright-purple text-white px-6 py-3 text-base font-semibold transition-all duration-500 rounded-full group transform hover:scale-110 hover:shadow-2xl hover:shadow-purple-highlight/25"
+                  className="bg-gradient-to-r from-bright-purple to-button-active hover:from-purple-highlight hover:to-bright-purple text-white px-6 py-2.5 text-sm font-semibold transition-all duration-500 rounded-full group transform hover:scale-110 hover:shadow-2xl hover:shadow-purple-highlight/25"
                 >
                   Join Our Community
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
@@ -96,7 +96,7 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-2 border-purple-highlight text-purple-highlight hover:bg-purple-highlight hover:text-white px-6 py-3 text-base font-semibold transition-all duration-500 rounded-full bg-transparent transform hover:scale-110"
+                  className="border-2 border-purple-highlight text-purple-highlight hover:bg-purple-highlight hover:text-white px-6 py-2.5 text-sm font-semibold transition-all duration-500 rounded-full bg-transparent transform hover:scale-110"
                 >
                   Explore Projects
                 </Button>
@@ -110,30 +110,30 @@ const Index = () => {
       <StatsSection />
 
       {/* About Us Section */}
-      <section className="py-16 bg-gradient-to-r from-section-bg via-dark-purple to-section-bg">
+      <section className="py-12 bg-gradient-to-r from-section-bg via-dark-purple to-section-bg">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
               About Us
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto font-light">
+            <p className="text-base text-gray-300 max-w-2xl mx-auto font-light">
               Discover who we are and what drives our mission to serve
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto">
-            <div className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-purple-highlight/20 hover:border-purple-highlight/40 transition-all duration-500">
-              <div className="space-y-4 text-gray-300 leading-relaxed">
-                <p className="text-base">
-                  The Rotaract Club of BMS Institute of Technology, Yelahanka, stands as a beacon of youth empowerment and community service. We embody the spirit of "Service Above Self" while fostering leadership and positive change.
+            <div className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-3xl p-5 md:p-6 border border-purple-highlight/20 hover:border-purple-highlight/40 transition-all duration-500">
+              <div className="space-y-3 text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-base">
+                  The Rotaract Club of BMS Institute of Technology, Yelahanka, stands as a beacon of youth empowerment and community service.
                 </p>
-                <p className="text-base">
-                  Our journey is marked by impactful projects - from health camps and educational workshops to environmental initiatives and community development programs, reflecting our commitment to building a better tomorrow.
+                <p className="text-sm md:text-base">
+                  Our journey is marked by impactful projects reflecting our commitment to building a better tomorrow.
                 </p>
-                <div className="mt-6 text-center">
+                <div className="mt-4 text-center">
                   <Link to="/team">
                     <Button 
-                      className="bg-gradient-to-r from-bright-purple to-button-active hover:from-purple-highlight hover:to-bright-purple text-white px-6 py-2 font-semibold rounded-full transform hover:scale-110 transition-all duration-300"
+                      className="bg-gradient-to-r from-bright-purple to-button-active hover:from-purple-highlight hover:to-bright-purple text-white px-5 py-2 text-sm font-semibold rounded-full transform hover:scale-110 transition-all duration-300"
                     >
                       Meet Our Team
                     </Button>
@@ -149,30 +149,30 @@ const Index = () => {
       <PolaroidBanner />
 
       {/* Initiatives Section */}
-      <section className="py-16 bg-gradient-to-br from-deep-base via-section-bg to-deep-base">
+      <section className="py-12 bg-gradient-to-br from-deep-base via-section-bg to-deep-base">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
               Our Impact Areas
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto font-light">
+            <p className="text-base text-gray-300 max-w-2xl mx-auto font-light">
               Four key pillars that drive our mission to create lasting positive change
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {initiatives.map((initiative, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-2xl p-6 text-center group hover:bg-gradient-to-br hover:from-purple-accent/30 hover:to-bright-purple/30 transition-all duration-500 border border-purple-highlight/20 hover:border-purple-highlight/50 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-highlight/10"
+                className="bg-gradient-to-br from-dark-accent/50 to-purple-accent/50 backdrop-blur-sm rounded-2xl p-5 text-center group hover:bg-gradient-to-br hover:from-purple-accent/30 hover:to-bright-purple/30 transition-all duration-500 border border-purple-highlight/20 hover:border-purple-highlight/50 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-highlight/10"
               >
-                <div className="text-purple-highlight mb-4 flex justify-center group-hover:scale-125 transition-transform duration-500">
+                <div className="text-purple-highlight mb-3 flex justify-center group-hover:scale-125 transition-transform duration-500">
                   {initiative.icon}
                 </div>
-                <h3 className="text-lg font-semibold mb-3 text-white group-hover:text-button-active transition-colors duration-300">
+                <h3 className="text-base font-semibold mb-2 text-white group-hover:text-button-active transition-colors duration-300">
                   {initiative.title}
                 </h3>
-                <p className="text-gray-300 leading-relaxed font-light text-sm">
+                <p className="text-gray-300 leading-relaxed font-light text-xs">
                   {initiative.description}
                 </p>
               </div>
@@ -182,19 +182,19 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-deep-base via-dark-purple/20 to-deep-base">
+      <section className="py-12 bg-gradient-to-br from-deep-base via-dark-purple/20 to-deep-base">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-gradient-to-r from-purple-highlight to-bright-purple bg-clip-text">
             Ready to Make an Impact?
           </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-base text-gray-300 mb-6 max-w-2xl mx-auto font-light leading-relaxed">
             Join a community of passionate young leaders committed to creating positive change. 
             Your journey of service and growth starts here.
           </p>
           <Link to="/join">
             <Button 
               size="lg"
-              className="bg-gradient-to-r from-bright-purple to-button-active hover:from-purple-highlight hover:to-bright-purple text-white px-8 py-4 text-lg font-semibold transition-all duration-500 rounded-full group transform hover:scale-110 hover:shadow-2xl hover:shadow-purple-highlight/25"
+              className="bg-gradient-to-r from-bright-purple to-button-active hover:from-purple-highlight hover:to-bright-purple text-white px-7 py-3 text-base font-semibold transition-all duration-500 rounded-full group transform hover:scale-110 hover:shadow-2xl hover:shadow-purple-highlight/25"
             >
               Join Rotaract BMSY
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
