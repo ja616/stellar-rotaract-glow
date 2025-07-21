@@ -59,44 +59,44 @@ const Index = () => {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-bright-purple/10 rounded-full blur-3xl animate-glow delay-1000"></div>
         </div>
         
-        <div className="container mx-auto px-6 text-center relative z-10 max-w-5xl flex-1 flex flex-col justify-center">
-          <div className="space-y-8 animate-fade-in">
+        <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl flex-1 flex flex-col justify-center">
+          <div className="space-y-16 animate-fade-in py-12">
             {/* Logo Section */}
-            <div className="flex justify-center items-center mb-8 transform hover:scale-105 transition-all duration-700">
+            <div className="flex justify-center items-center mb-12 transform hover:scale-105 transition-all duration-700">
               <img 
                 src="/lovable-uploads/5d412404-e118-4763-a5fb-69304897cc03.png" 
                 alt="Rotaract Club Logos" 
-                className="h-16 md:h-20 w-auto animate-fade-in delay-300"
+                className="h-24 md:h-32 w-auto animate-fade-in delay-300"
               />
             </div>
             
-            <div className="space-y-8">              
-              <div className="h-16 flex items-center justify-center">
-                <p className="text-2xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-purple-highlight via-bright-purple to-button-active bg-clip-text animate-glow">
+            <div className="space-y-12">              
+              <div className="h-24 md:h-32 flex items-center justify-center">
+                <p className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-gradient-to-r from-purple-highlight via-bright-purple to-button-active bg-clip-text animate-glow leading-tight">
                   {heroTexts[currentText]}
                 </p>
               </div>
               
-              <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed opacity-0 animate-fade-in delay-500">
+              <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed opacity-0 animate-fade-in delay-500">
                 Empowering youth to create positive change in our community through service, leadership, and fellowship.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 opacity-0 animate-fade-in delay-700">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-12 opacity-0 animate-fade-in delay-700">
               <Link to="/join">
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-bright-purple to-button-active hover:from-purple-highlight hover:to-bright-purple text-white px-8 py-3 text-base font-semibold transition-all duration-500 rounded-full group transform hover:scale-110 hover:shadow-2xl hover:shadow-purple-highlight/25"
+                  className="bg-gradient-to-r from-bright-purple to-button-active hover:from-purple-highlight hover:to-bright-purple text-white px-12 py-4 text-lg md:text-xl font-semibold transition-all duration-500 rounded-full group transform hover:scale-110 hover:shadow-2xl hover:shadow-purple-highlight/25 min-h-[60px]"
                 >
                   Join Our Community
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </Button>
               </Link>
               <Link to="/projects">
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-2 border-purple-highlight text-purple-highlight hover:bg-purple-highlight hover:text-white px-8 py-3 text-base font-semibold transition-all duration-500 rounded-full bg-transparent transform hover:scale-110"
+                  className="border-2 border-purple-highlight text-purple-highlight hover:bg-purple-highlight hover:text-white px-12 py-4 text-lg md:text-xl font-semibold transition-all duration-500 rounded-full bg-transparent transform hover:scale-110 min-h-[60px]"
                 >
                   Explore Projects
                 </Button>
