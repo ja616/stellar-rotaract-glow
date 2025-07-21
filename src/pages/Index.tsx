@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PolaroidBanner from '@/components/PolaroidBanner';
 import StatsSection from '@/components/StatsSection';
+import UpcomingEvents from '@/components/UpcomingEvents';
 
 const Index = () => {
   const [currentText, setCurrentText] = useState(0);
@@ -202,6 +203,9 @@ const Index = () => {
           </Link>
         </div>
       </section>
+
+      {/* Upcoming Events */}
+      <UpcomingEvents />
 
       <Footer />
     </div>
